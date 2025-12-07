@@ -42,6 +42,12 @@
             border: 3px solid red;
             border-radius: 10px;
         }
+        video {
+            max-width: 400px;
+            margin-top: 20px;
+            border: 3px solid red;
+            border-radius: 10px;
+        }
         #playBtn {
             background-color: red;
             color: white;
@@ -61,22 +67,56 @@
         #playBtn.hidden {
             display: none;
         }
+        #domerBtn {
+            background-color: transparent;
+            border: 3px solid red;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 15px;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        #domerBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px red;
+        }
+        #domerBtn img {
+            width: 100px;
+            height: 100px;
+            border: none;
+            display: block;
+        }
     </style>
 </head>
 <body>
     <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWR5d3FnZjBzYzR6M3QyZ3Z5dGZvZHhxdGx5MWJ5Y3dobjBvNnVxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif" alt="infinite loop gif">
     <h1>ill loop you in dbd blud</h1>
+    <video controls loop>
+        <source src="baldis-basic-baldi.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <button id="playBtn">CLICK TO START LOOPING</button>
+    <button id="domerBtn">
+        <img src="domer.webp" alt="domer">
+    </button>
     
     <audio id="loopAudio" src="500.mp3" loop></audio>
+    <audio id="domerAudio" src="domer.mp3"></audio>
 
     <script>
         const audio = document.getElementById('loopAudio');
         const btn = document.getElementById('playBtn');
+        const domerBtn = document.getElementById('domerBtn');
+        const domerAudio = document.getElementById('domerAudio');
         
         btn.addEventListener('click', () => {
             audio.play();
             btn.classList.add('hidden');
+        });
+        
+        domerBtn.addEventListener('click', () => {
+            domerAudio.currentTime = 0;
+            domerAudio.play();
         });
     </script>
 </body>
