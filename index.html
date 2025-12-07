@@ -8,7 +8,6 @@
     <meta property="og:description" content="ill loop you in dbd blud" />
     <meta property="og:image" content="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWR5d3FnZjBzYzR6M3QyZ3Z5dGZvZHhxdGx5MWJ5Y3dobjBvNnVxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yoursite.com" />
     
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,9 +25,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            overflow: hidden;
+            padding: 20px;
+            overflow-x: hidden;
         }
         h1 {
             color: red;
@@ -36,14 +36,17 @@
             font-size: 5rem;
             text-align: center;
             text-shadow: 0 0 10px red;
+            margin: 20px 0;
         }
-        img {
+        img.loop-gif {
             max-width: 500px;
+            width: 100%;
             border: 3px solid red;
             border-radius: 10px;
         }
         video {
             max-width: 400px;
+            width: 100%;
             margin-top: 20px;
             border: 3px solid red;
             border-radius: 10px;
@@ -89,7 +92,7 @@
     </style>
 </head>
 <body>
-    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWR5d3FnZjBzYzR6M3QyZ3Z5dGZvZHhxdGx5MWJ5Y3dobjBvNnVxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif" alt="infinite loop gif">
+    <img class="loop-gif" src="loop.gif" alt="infinite loop gif">
     <h1>ill loop you in dbd blud</h1>
     <video controls loop>
         <source src="baldis-basic-baldi.mp4" type="video/mp4">
