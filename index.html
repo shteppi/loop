@@ -89,6 +89,25 @@
             border: none;
             display: block;
         }
+        #deathBtn {
+            background-color: transparent;
+            border: 3px solid red;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 15px;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        #deathBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px red;
+        }
+        #deathBtn img {
+            width: 100px;
+            height: 100px;
+            border: none;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -102,15 +121,21 @@
     <button id="domerBtn">
         <img src="domer.webp" alt="domer">
     </button>
+    <button id="deathBtn">
+        <img src="death.webp" alt="death">
+    </button>
     
     <audio id="loopAudio" src="500.mp3" loop></audio>
     <audio id="domerAudio" src="domer.mp3"></audio>
+    <audio id="deathAudio" src="loud.mp3"></audio>
 
     <script>
         const audio = document.getElementById('loopAudio');
         const btn = document.getElementById('playBtn');
         const domerBtn = document.getElementById('domerBtn');
         const domerAudio = document.getElementById('domerAudio');
+        const deathBtn = document.getElementById('deathBtn');
+        const deathAudio = document.getElementById('deathAudio');
         
         btn.addEventListener('click', () => {
             audio.play();
@@ -120,6 +145,11 @@
         domerBtn.addEventListener('click', () => {
             domerAudio.currentTime = 0;
             domerAudio.play();
+        });
+        
+        deathBtn.addEventListener('click', () => {
+            deathAudio.currentTime = 0;
+            deathAudio.play();
         });
     </script>
 </body>
