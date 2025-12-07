@@ -140,6 +140,21 @@
             pointer-events: none;
             z-index: 9999;
         }
+        #flashbang {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.1s;
+        }
+        #flashbang.active {
+            opacity: 1;
+        }
         footer {
             position: fixed;
             bottom: 0;
@@ -176,6 +191,8 @@
     <audio id="loopAudio" src="500.mp3" loop></audio>
     <audio id="domerAudio" src="domer.mp3"></audio>
     <audio id="deathAudio" src="loud.mp3"></audio>
+    
+    <div id="flashbang"></div>
 
     <script>
         const audio = document.getElementById('loopAudio');
@@ -184,6 +201,7 @@
         const domerAudio = document.getElementById('domerAudio');
         const deathBtn = document.getElementById('deathBtn');
         const deathAudio = document.getElementById('deathAudio');
+        const flashbang = document.getElementById('flashbang');
         
         btn.addEventListener('click', () => {
             audio.play();
@@ -198,6 +216,11 @@
         deathBtn.addEventListener('click', () => {
             deathAudio.currentTime = 0;
             deathAudio.play();
+            
+            flashbang.classList.add('active');
+            setTimeout(() => {
+                flashbang.classList.remove('active');
+            }, 1000);
         });
         
         const homerBtn = document.getElementById('homerBtn');
