@@ -2,6 +2,23 @@
 <html>
 <head>
     <title>Get Looped</title>
+    
+    <!-- Open Graph tags for Discord embeds -->
+    <meta property="og:title" content="Get Looped" />
+    <meta property="og:description" content="ill loop you in dbd blud" />
+    <meta property="og:image" content="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWR5d3FnZjBzYzR6M3QyZ3Z5dGZvZHhxdGx5MWJ5Y3dobjBvNnVxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yoursite.com" />
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Get Looped" />
+    <meta name="twitter:description" content="ill loop you in dbd blud" />
+    <meta name="twitter:image" content="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWR5d3FnZjBzYzR6M3QyZ3Z5dGZvZHhxdGx5MWJ5Y3dobjBvNnVxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif" />
+    
+    <!-- Theme color for Discord -->
+    <meta name="theme-color" content="#FF0000" />
+    
     <style>
         body {
             background-color: black;
@@ -18,6 +35,12 @@
             font-family: "Comic Sans MS", "Comic Sans", cursive;
             font-size: 5rem;
             text-align: center;
+            text-shadow: 0 0 10px red;
+        }
+        img {
+            max-width: 500px;
+            border: 3px solid red;
+            border-radius: 10px;
         }
         #playBtn {
             background-color: red;
@@ -29,9 +52,11 @@
             cursor: pointer;
             margin-top: 20px;
             border-radius: 10px;
+            transition: all 0.3s;
         }
         #playBtn:hover {
             background-color: darkred;
+            transform: scale(1.1);
         }
         #playBtn.hidden {
             display: none;
@@ -39,9 +64,9 @@
     </style>
 </head>
 <body>
-    <img src="loop.gif" alt="loop">
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWR5d3FnZjBzYzR6M3QyZ3Z5dGZvZHhxdGx5MWJ5Y3dobjBvNnVxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif" alt="infinite loop gif">
     <h1>ill loop you in dbd blud</h1>
-    <button id="playBtn">CLICK TO START GETTING LOOPED</button>
+    <button id="playBtn">CLICK TO START LOOPING</button>
     
     <audio id="loopAudio" src="500.mp3" loop></audio>
 
