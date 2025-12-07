@@ -19,12 +19,40 @@
             font-size: 5rem;
             text-align: center;
         }
+        #playBtn {
+            background-color: red;
+            color: white;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            font-size: 2rem;
+            padding: 20px 40px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        #playBtn:hover {
+            background-color: darkred;
+        }
+        #playBtn.hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <img src="loop.gif" alt="loop">
     <h1>ill loop you in dbd blud</h1>
+    <button id="playBtn">CLICK TO START LOOPING</button>
     
-    <audio src="500.mp3" autoplay loop></audio>
+    <audio id="loopAudio" src="500.mp3" loop></audio>
+
+    <script>
+        const audio = document.getElementById('loopAudio');
+        const btn = document.getElementById('playBtn');
+        
+        btn.addEventListener('click', () => {
+            audio.play();
+            btn.classList.add('hidden');
+        });
+    </script>
 </body>
 </html>
